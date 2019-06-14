@@ -15,5 +15,8 @@ public interface Locators {
 		
 	}
 
+	public interface HomePageLocators {
+		String LOGIN_LINK = "//a[contains(@href,'login')]";
+	}
 		
 }

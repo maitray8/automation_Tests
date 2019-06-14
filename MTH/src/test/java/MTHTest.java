@@ -17,7 +17,12 @@ public class MTHTest {
 		BasePage.OpenApplication();
 	}
 
-
+	@Test
+	public void loginTest() {
+		LoginPage lp = new LoginPage();
+		
+		lp.loginToApplication();
+	}
 	
 	@AfterSuite
 	public void closeBrowser() {

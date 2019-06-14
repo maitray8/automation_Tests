@@ -8,6 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
+import com.mth.Locators.Locators.HomePageLocators;
 import com.mth.Locators.Locators.LoginPageLocators;
 import com.mth.configuration.BasePage;;
 
@@ -17,6 +18,11 @@ public class LoginPage extends TemplatePage implements LoginPageLocators {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void loginToApplication()
+	{
+		HomePage hp = new HomePage();
+		hp.get_loginlink().click();
 	
+	}
 
 }
