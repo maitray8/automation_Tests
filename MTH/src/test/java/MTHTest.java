@@ -17,11 +17,16 @@ public class MTHTest {
 		BasePage.OpenApplication();
 	}
 
-	@Test
-	public void loginTest() throws IOException {
+	@Test(groups = {"regression","smoke"})
+	public void login_With_Valid_Credentails() throws IOException {
 		LoginPage lp = new LoginPage();
-		
 		lp.loginToApplication();
+	}
+	
+	@Test(groups = {"regression"})
+	public void login_With_InValid_Credentails() throws IOException {
+		LoginPage lp = new LoginPage();
+		lp.loginToApplication_Invalid();
 	}
 	
 	@AfterSuite

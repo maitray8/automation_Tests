@@ -7,7 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.mth.configuration.*;
-import com.mth.Locators.Locators.LoginPageLocators;;
+import com.mth.Locators.Locators.LoginPageLocators;
+import com.mth.configuration.BasePage;;
 
 public class LoginPage extends TemplatePage implements LoginPageLocators {
 	
@@ -34,6 +35,10 @@ public class LoginPage extends TemplatePage implements LoginPageLocators {
 		lp.getUsernameTextbox().sendKeys(configFileReader.getCustomProperty("email"));
 		lp.getPasswordTextbox().sendKeys(configFileReader.getCustomProperty("password"));
 		lp.getSubmitButton().click();
+	}
+	
+	public void loginToApplication_Invalid() throws IOException {
+		
 	}
 
 	public WebElement getUsernameTextbox(){

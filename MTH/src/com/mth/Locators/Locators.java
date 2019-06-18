@@ -16,10 +16,14 @@ public interface Locators {
 
 	public interface DashboardLocators {
 		
+		String PAGETITLE_XPATH = "//title[contains(text(),'Dashboard')]";
+		
 	}
 
 	public interface HomePageLocators {
 		String LOGIN_LINK = "//a[contains(@href,'login')]";
 	}
+	
+
 		
 }
