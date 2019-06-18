@@ -37,7 +37,8 @@ public class configFileReader {
 			throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
 		}
 	}
-
+	
+	
 	public String getDriverPath() {
 		String driverPath = properties.getProperty("chromedriverpath");
 		if (driverPath != null)

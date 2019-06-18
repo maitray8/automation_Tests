@@ -9,6 +9,9 @@ public interface Locators {
 	
 	public interface LoginPageLocators {
 		
+		String USERNAME_TEXTBOX_ID = "inputEmail";
+		String PASSWORD_TEXTBOX_ID = "inputPassword";
+		String SUBMIT_BUTTON_XPATH = "//button[contains(text(),'Log In')]";
 	}
 
 	public interface DashboardLocators {

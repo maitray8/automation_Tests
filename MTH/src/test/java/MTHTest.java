@@ -18,7 +18,7 @@ public class MTHTest {
 	}
 
 	@Test
-	public void loginTest() {
+	public void loginTest() throws IOException {
 		LoginPage lp = new LoginPage();
 		
 		lp.loginToApplication();
