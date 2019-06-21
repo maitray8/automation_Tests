@@ -67,8 +67,17 @@ public class BasePage extends configFileReader {
 	}
 
 	public static void setDriver() {
+		String os = System.getProperty("os.name").toLowerCase();
+		
 		configFileReader = new configFileReader();
-		System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
+		
+		if(os.contains("mac")){
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/drivers/chromedriver");
+		}
+		else{
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ configFileReader.getDriverPath());
+		}
+		
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, TIMEOUT, POLLING);
 
