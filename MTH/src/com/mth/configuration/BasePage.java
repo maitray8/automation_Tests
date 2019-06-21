@@ -72,7 +72,7 @@ public class BasePage extends configFileReader {
 		configFileReader = new configFileReader();
 		
 		if(os.contains("mac")){
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/drivers/chromedriver");
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/driver/chromedriver");
 		}
 		else
 		{
