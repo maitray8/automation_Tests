@@ -78,7 +78,7 @@ public class configFileReader {
 	}
 
 	// Method to verify element on screen
-	public static void verifyElemet(WebElement webElement, String elementName) throws Exception {
+	public static void verifyElement(WebElement webElement, String elementName) throws Exception {
 		if (webElement.isDisplayed()) {
 			Reporter.log(elementName + " is Present on screen");
 		} else {
