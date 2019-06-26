@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.mth.configuration.BasePage;
 import com.mth.configuration.configFileReader;
+import com.mth.pages.DashboardPage;
 import com.mth.pages.LoginPage;
 
 public class MTHTest {
@@ -39,6 +40,14 @@ public class MTHTest {
 		loginPage.loginToApplication();
 	}
 
+
+	@Test(groups = { "regression",
+			"smoke" }, priority = 4, description = "suit is to verify dashboard")
+	public void verify_dashboard() throws Exception {
+		DashboardPage dashboardPage=new DashboardPage();
+		dashboardPage.verify_LandingPage();
+	}	
+	
 	@AfterSuite
 	public void closeBrowser() {
 		BasePage.closeBroswer();
