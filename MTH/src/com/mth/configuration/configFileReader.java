@@ -80,19 +80,19 @@ public class configFileReader {
 	// Method to verify element on screen
 	public static void verifyElement(WebElement webElement, String elementName) throws Exception {
 		if (webElement.isDisplayed()) {
-			Reporter.log(elementName + " is Present on screen");
+			Reporter.log("[fail]"+elementName + " is Present on screen");
 		} else {
-			Reporter.log(elementName + " is not Present on screen");
-			WebDriver driver= new ChromeDriver();
-			String imagePath=getCustomProperty("imagefilepath");
-			takeSnapShot(driver,imagePath);
+			Reporter.log("[fail]"+elementName + " is not Present on screen");
+			//WebDriver driver= new ChromeDriver();
+			//String imagePath=getCustomProperty("imagefilepath");
+			//takeSnapShot(driver,imagePath);
 		}
 	
 
 	}
 	//Method to take screenshot
 
-	public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws Exception {
+	/*public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws Exception {
 		// Convert web driver object to TakeScreenshot
 		TakesScreenshot scrShot = ((TakesScreenshot) webdriver);
 		// Call getScreenshotAs method to create image file
@@ -101,6 +101,6 @@ public class configFileReader {
 		File DestFile = new File(fileWithPath);
 		// Copy file at destination
 		FileUtils.copyFile(SrcFile, DestFile);
-	}
+	}*/
 
 }

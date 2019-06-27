@@ -1,4 +1,4 @@
-package com.mth.test;
+package test.java;
 
 import java.io.IOException;
 

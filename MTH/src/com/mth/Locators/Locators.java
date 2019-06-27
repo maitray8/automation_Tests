@@ -22,7 +22,7 @@ public interface Locators {
 
 	public interface DashboardLocators {
 
-		String PAGETITLE_XPATH = "//title[contains(text(),'Dashboard')]";
+		String PAGETITLE_XPATH = "//span[text()='Dashboard']";
 		String UPCOMING_EVENT_ID="//div[@id='upcoming-events']";
 		String OVER_DUE_LENT_ITEM_ID="//div[@id='money']";
 		String ACCOUNT_INFO_ID="//div[@id='finances']";
