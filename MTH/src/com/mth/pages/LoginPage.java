@@ -102,9 +102,9 @@ public class LoginPage extends TemplatePage implements LoginPageLocators {
 	// Verifying login functionality with valid credentials
 	public void loginToApplication() throws Exception {
 		LoginPage loginPage = new LoginPage();
-		Reporter.log("Entering invalid username:" + configFileReader.getCustomProperty("email"));
+		Reporter.log("Entering valid username:" + configFileReader.getCustomProperty("email"));
 		loginPage.getUsernameTextbox().sendKeys(configFileReader.getCustomProperty("email"));
-		Reporter.log("Entering invalid password:" + configFileReader.getCustomProperty("password"));
+		Reporter.log("Entering valid password:" + configFileReader.getCustomProperty("password"));
 		loginPage.getPasswordTextbox().sendKeys(configFileReader.getCustomProperty("password"));
 		loginPage.getSubmitButton().click();
 		waitForPageToLoad();
@@ -116,9 +116,9 @@ public class LoginPage extends TemplatePage implements LoginPageLocators {
 	// Verifying login functionality with invalid credentials
 	public void loginToApplication_Invalid() throws IOException {
 		LoginPage loginPage = new LoginPage();
-		Reporter.log("Entering valid username:" + configFileReader.getCustomProperty("email"));
+		Reporter.log("Entering invalid username:" + configFileReader.getCustomProperty("incorrect_email"));
 		loginPage.getUsernameTextbox().sendKeys(configFileReader.getCustomProperty("incorrect_email"));
-		Reporter.log("Entering valid password:" + configFileReader.getCustomProperty("password"));
+		Reporter.log("Entering invalid password:" + configFileReader.getCustomProperty("password"));
 		loginPage.getPasswordTextbox().sendKeys(configFileReader.getCustomProperty("password"));
 		loginPage.getSubmitButton().click();
 		if (getValidation_msg().isDisplayed()) {
