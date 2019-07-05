@@ -24,7 +24,7 @@ public class DashboardPage extends BasePage implements DashboardLocators {
 	@FindBy(how = How.XPATH, using = OVER_DUE_LENT_ITEM_ID)
 	private WebElement overdue_lent_item;
 	
-	@FindBy(how = How.XPATH, using = UPCOMING_EVENT_ID)
+	@FindBy(how = How.XPATH, using = ACCOUNT_INFO_ID)
 	private WebElement account_info;
 	
 	@FindBy(how = How.XPATH, using = UPCOMING_EVENT_ID)
@@ -33,6 +33,8 @@ public class DashboardPage extends BasePage implements DashboardLocators {
 	@FindBy(how = How.XPATH, using = BIRTHDAY_TILE_ID)
 	private WebElement birthday_tile;
 	
+	@FindBy(how = How.XPATH, using = MONTHLY_EARNING_CHART)
+	private WebElement monthly_earning_chart;
 	
 	public WebElement getBirthday_tile() {
 		return birthday_tile;
@@ -57,6 +59,11 @@ public class DashboardPage extends BasePage implements DashboardLocators {
 	public WebElement getFinance_tile() {
 		return finance_tile;
 	}
+	
+	public WebElement getMonthly_earning_chart() {
+		return monthly_earning_chart;
+	}
+
 
 	public void verify_LandingPage() throws Exception {
 		verifyElement(getDashboardtitle(), "Dashboard Title");
@@ -65,9 +72,9 @@ public class DashboardPage extends BasePage implements DashboardLocators {
 		verifyElement(getAccount_info(), "Account Information Tile");
 		verifyElement(getFinance_tile(), "Finance Tile");
 		verifyElement(getBirthday_tile(), "Birthday Tile");
+		verifyElement(getMonthly_earning_chart(), "Monthly Earning Tile");
 	
 	}
-	
-	
+		
 	
 }

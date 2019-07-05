@@ -38,8 +38,15 @@ public class configFileReader {
 		}
 	}
 	
+	public String getFireFoxDriverPath() {
+		String driverPath = properties.getProperty("firefoxdriverpath");
+		if (driverPath != null)
+			return driverPath;
+		else
+			throw new RuntimeException("driverPath not specified in the Configuration.properties file.");
+	}
 	
-	public String getDriverPath() {
+	public String getChromeDriverPath() {
 		String driverPath = properties.getProperty("chromedriverpath");
 		if (driverPath != null)
 			return driverPath;
@@ -80,7 +87,7 @@ public class configFileReader {
 	// Method to verify element on screen
 	public static void verifyElement(WebElement webElement, String elementName) throws Exception {
 		if (webElement.isDisplayed()) {
-			Reporter.log("[fail]"+elementName + " is Present on screen");
+			Reporter.log("[Pass]"+elementName + " is Present on screen");
 		} else {
 			Reporter.log("[fail]"+elementName + " is not Present on screen");
 			//WebDriver driver= new ChromeDriver();

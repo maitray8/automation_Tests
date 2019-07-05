@@ -3,7 +3,9 @@ package com.mth.Locators;
 public interface Locators {
 
 	public interface TemplatePageLocator {
-
+		String PROFILE_ICON_XPATH=".//div[@id='welcome']//div[@class='menu-profile']";
+		String SETTING_MENU_XPATH="//a[@class='menu-web-settings']";
+		String DIV_TOP_XPATH="//div[@id='top']";
 	}
 
 	public interface LoginPageLocators {
@@ -16,8 +18,6 @@ public interface Locators {
 		String SUBMIT_BUTTON_XPATH = "//button[contains(text(),'Log In')]";
 		String VALIDATION_MSG_ERROR_XPATH="//div[contains(@class,'danger')]";
 		String PAGETITLE_XPATH = "//title[contains(text(),'Dashboard')]";
-
-		
 	}
 
 	public interface DashboardLocators {
@@ -28,11 +28,21 @@ public interface Locators {
 		String ACCOUNT_INFO_ID="//div[@id='finances']";
 		String MONTHLY_EARNING_CHART="//div[@id='money']";
 		String BIRTHDAY_TILE_ID="//div[@id='birthday']";
-
+		String ANNOUCEMENT_TILE_ID="div #blog-feed";
 	}
 
 	public interface HomePageLocators {
 		String LOGIN_LINK = "//a[contains(@href,'login')]";
+	}	
+	
+	public interface settingPageLocators {
+		String RATE_TXT_NAME_ID="//input[@id='NameRate']";
+		String AMOUNT_TXT_ID="//input[@id='Amount']";
+		String EVERY_TXT_ID="//input[@id='Period']";
+		String DESCRIPTION_TXTAREA_ID="textarea#Description";
+		String PERIOD_DROPDOWN_ID="div#LessonsType_chosen";
+		String CREATE_RATE_ID="//input[@id='addratepackage']";
+		String CREATE_NEW_RATE_BUTTON="//input[@id='addratepackage']";
+		String RATE_TAB_XPATH="//a/span[text()='Rates']";
 	}
-
 }

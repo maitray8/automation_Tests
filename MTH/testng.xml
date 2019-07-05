@@ -1,13 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE root SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Libsyn Test Suit">
-	<listeners>
+<suite name="MTH Test Suit" verbose="1"	>
+	<!-- <listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-	</listeners>
-	<test>
+	</listeners> -->
+	<test name="TestMTH">
 		<classes>
-			<class name="com.mth.test.MTHTest">
-			</class>
+			<class name="test.java.MTHTest"/>
 		</classes>
 	</test>
-</suite>
+</suite>	

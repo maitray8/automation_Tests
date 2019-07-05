@@ -1,6 +1,7 @@
 package com.mth.configuration;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -8,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,11 +28,10 @@ public class BasePage extends configFileReader {
 	static configFileReader configFileReader = null;
 	protected static WebDriver driver;
 	private static WebDriverWait wait;
+	private static Properties properties;
+	final String propertyFilePath = "resource//base.properties";
 
 	public BasePage() {
-		/*
-		 * setDriver(); //driver=BasePage.driver; OpenApplication();
-		 */
 	}
 
 	protected void waitForElementToAppear(WebElement element) {
@@ -62,26 +63,30 @@ public class BasePage extends configFileReader {
 	public static void OpenApplication() {
 		setDriver();
 		String url = configFileReader.getApplicationUrl();
+
 		driver.get(url);
 		driver.manage().window().maximize();
 	}
 
 	public static void setDriver() {
 		String os = System.getProperty("os.name").toLowerCase();
-		
+		//String browser = "firefox";
 		configFileReader = new configFileReader();
-		
-		if(os.contains("mac")){
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/driver/chromedriver");
-		}
-		else
+		if (os.contains("mac")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver");
+		} else
 		{
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ configFileReader.getDriverPath());
-		}
-		
-		driver = new ChromeDriver();
-		wait = new WebDriverWait(driver, TIMEOUT, POLLING);
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + configFileReader.getChromeDriverPath());
+			driver = new ChromeDriver();
+			wait = new WebDriverWait(driver, TIMEOUT, POLLING);
 
+		} /*else {
+			System.setProperty("webdriver.gecko.driver",
+					System.getProperty("user.dir") + configFileReader.getFireFoxDriverPath());
+			driver = new FirefoxDriver();
+			wait = new WebDriverWait(driver, TIMEOUT, POLLING);
+		}*/
 	}
 
 	public static void closeBroswer() {
