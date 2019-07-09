@@ -36,13 +36,13 @@ public interface Locators {
 	}	
 	
 	public interface settingPageLocators {
-		String RATE_TXT_NAME_ID="//input[@id='NameRate']";
-		String AMOUNT_TXT_ID="//input[@id='Amount']";
+		String RATE_TXT_NAME_ID="//div[@id='NameRaterow']";
+		String AMOUNT_TXT_ID="Amountrow";
 		String EVERY_TXT_ID="//input[@id='Period']";
 		String DESCRIPTION_TXTAREA_ID="textarea#Description";
 		String PERIOD_DROPDOWN_ID="div#LessonsType_chosen";
-		String CREATE_RATE_ID="//input[@id='addratepackage']";
-		String CREATE_NEW_RATE_BUTTON="//input[@id='addratepackage']";
-		String RATE_TAB_XPATH="//a/span[text()='Rates']";
+		String CREATE_RATE_ID=".//input[@id='addratepackage']";
+		String CREATE_NEW_RATE_BUTTON=".//input[@id='addratepackage']";
+		String RATE_TAB_XPATH="//span[text()='Rates']";
 	}
 }

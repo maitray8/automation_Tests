@@ -53,7 +53,7 @@ public class BasePage extends configFileReader {
 
 	protected void waitForPageToLoad() {
 		try {
-			Thread.sleep(6000);
+			Thread.sleep(7000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
