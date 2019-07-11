@@ -108,7 +108,7 @@ public class LoginPage extends TemplatePage implements LoginPageLocators {
 		loginPage.getPasswordTextbox().sendKeys(configFileReader.getCustomProperty("password"));
 		loginPage.getSubmitButton().click();
 		waitForPageToLoad();
-		if(getDashboard_title().isDisplayed()) {
+		if (getDashboard_title().isDisplayed()) {
 			Reporter.log("User is navigated on dashboard page");
 		}
 	}

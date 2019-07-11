@@ -52,6 +52,7 @@ public class MTHTest {
 		settingPage.getSettingMenu();
 		settingPage.navigateToRateSetting_Page();
 		settingPage.verifyRatePackagePage();
+		settingPage.createRatePackage("Test", "10", "1", "description");
 	}
 
 	@AfterSuite
@@ -59,4 +60,3 @@ public class MTHTest {
 		BasePage.closeBroswer();
 	}
 }
- 
