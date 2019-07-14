@@ -95,7 +95,7 @@ public class LoginPage extends TemplatePage implements LoginPageLocators {
 		verifyElement(getUsernameTextbox(), "Username Textbox");
 		verifyElement(getPasswordTextbox(), "Password Textbox");
 		verifyElement(getSubmitButton(), "Login Button");
-		verifyElement(getLink_remeberme(), "Forgot Password Link");
+		verifyElement(getLink_remeberme(), "Remember me Link");
 		verifyElement(getLink_forgotpassword(), "Forgot Password Link");
 	}
 

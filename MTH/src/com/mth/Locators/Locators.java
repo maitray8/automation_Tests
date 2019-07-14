@@ -44,7 +44,20 @@ public interface Locators {
 		String CREATE_RATE_ID = ".//input[@id='addratepackage']";
 		String CREATE_NEW_RATE_BUTTON = ".//input[@id='addratepackage']";
 		String RATE_TAB_XPATH = "//span[text()='Rates']";
-		String SELECT_LESSON_XPATH="//div[@class='chosen-drop']//ul//li[text()='Lesson']";
-		String SUCCESS_MESSAGE_CLASS="//span[text()='Your Rate Settings Have Been Updated.']";
+		String SELECT_LESSON_XPATH = "//div[@class='chosen-drop']//ul//li[text()='Lesson']";
+		String SUCCESS_MESSAGE_CLASS = "//span[text()='Your Rate Settings Have Been Updated.']";
+	}
+
+	public interface studentPageLocators {
+		String BTN_ADD_STUDENT_XPATH = "//a[@title='New Student']";
+		String ADD_NEW_STUDENT_XPATH = "//iframe[@id='externalSite']";
+		String RADIOBTN_ACTIVE_XPATH = "//input[@value='Active']";
+		String RADIOBTN_LEAD_XPATH = "//input[@value='Lead']";
+		String RADIOBTN_WAITLIST_XPATH = "//input[@value='Waiting']";
+		String TXT_FIRSTNAME_XPATH = "//input[@name='Student[0][First]']";
+		String TXT_LASTNAME_XPATH = "//input[@name='Student[0][Last]']";
+		String BTN_CREATE_XPATH = "//input[@id='AddStudent']";
+		String BTN_ADD_DETAIL_XPATH = "//input[@id='addDetails']";
+		String BTN_CANCEL_XPATH="//a[text()='Cancel']";
 	}
 }

@@ -2,15 +2,15 @@ package test.java;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import com.mth.configuration.BasePage;
+import com.mth.configuration.configFileReader;
 import com.mth.pages.DashboardPage;
 import com.mth.pages.LoginPage;
 import com.mth.pages.SettingPage;
+import com.mth.pages.StudentPage;
 
 public class MTHTest {
 
@@ -55,8 +55,21 @@ public class MTHTest {
 		settingPage.createRatePackage("Test", "10", "1", "description");
 	}
 
+	@Test(groups = { "regression",
+			"smoke" }, priority = 6, description = "suit is to verify add Add student functionality")
+	public void verify_add_student_functionality() throws Exception {
+		StudentPage studentPage = new StudentPage();
+		studentPage.naviagteToStudentListingPage();
+		studentPage.verify_Add_Student_Page();
+		studentPage.VerifyAddStudentPopup();
+		studentPage.createStudent(configFileReader.getCustomProperty("firstname"),
+				configFileReader.getCustomProperty("LastName"));
+
+	}
+
 	@AfterSuite
 	public void closeBrowser() {
 		BasePage.closeBroswer();
 	}
+
 }
