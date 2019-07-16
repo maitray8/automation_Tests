@@ -53,6 +53,33 @@ public class StudentPage extends TemplatePage implements studentPageLocators {
 	@FindBy(how = How.XPATH, using = BTN_ADD_DETAIL_XPATH)
 	private WebElement btn_add_Details;
 
+	@FindBy(how = How.XPATH, using = ALL_TAB_XPATH)
+	private WebElement tab_all_student;
+
+	@FindBy(how = How.XPATH, using = ACTIVE_TAB_XPATH)
+	private WebElement tab_active;
+
+	@FindBy(how = How.XPATH, using = FORMER_TAB_XPATH)
+	private WebElement former_tab;
+
+	@FindBy(how = How.XPATH, using = LEAD_TAB_XPATH)
+	private WebElement lead_tab;
+
+	@FindBy(how = How.XPATH, using = WAITLIST_TAB_XPATH)
+	private WebElement waitlist_tab;
+
+	@FindBy(how = How.XPATH, using = BTN_NEXT_XPATH)
+	private WebElement btn_next;
+
+	@FindBy(how = How.XPATH, using = BTN_PREVIOUS_XPATH)
+	private WebElement btn_previous;
+
+	@FindBy(how = How.XPATH, using = BTN_FIRST_XPATH)
+	private WebElement btn_first;
+
+	@FindBy(how = How.XPATH, using = BTN_LAST_XPATH)
+	private WebElement btn_last;
+
 	public WebElement getRdbtn_Active_status() {
 		return rdbtn_Active_status;
 	}
@@ -93,6 +120,42 @@ public class StudentPage extends TemplatePage implements studentPageLocators {
 		return btn_add_Details;
 	}
 
+	public WebElement getTab_all_student() {
+		return tab_all_student;
+	}
+
+	public WebElement getTab_active() {
+		return tab_active;
+	}
+
+	public WebElement getFormer_tab() {
+		return former_tab;
+	}
+
+	public WebElement getLead_tab() {
+		return lead_tab;
+	}
+
+	public WebElement getWaitlist_tab() {
+		return waitlist_tab;
+	}
+
+	public WebElement getBtn_next() {
+		return btn_next;
+	}
+
+	public WebElement getBtn_previous() {
+		return btn_previous;
+	}
+
+	public WebElement getBtn_first() {
+		return btn_first;
+	}
+
+	public WebElement getBtn_last() {
+		return btn_last;
+	}
+
 	public void naviagteToStudentListingPage() {
 		Reporter.log("Navigating to student listing page");
 		driver.get(getApplicationUrl() + "/teacher/students.php");
@@ -126,5 +189,25 @@ public class StudentPage extends TemplatePage implements studentPageLocators {
 		getTxt_first_name().sendKeys(name);
 		getTxt_last_name().sendKeys(lastname);
 		getBtn_create().click();
+	}
+
+	public void verify_tab() throws Exception {
+		verifyElement(getTab_all_student(), "All Student tab");
+		verifyElement(getTab_active(), "Active tab");
+		verifyElement(getLead_tab(), "Lead Tab");
+		verifyElement(getFormer_tab(), "Former Tab");
+		verifyElement(getWaitlist_tab(), "Waiting List Tab");
+		verifyElement(getBtn_first(), "Button First");
+		verifyElement(getBtn_last(), "Button last");
+		verifyElement(getBtn_next(), "Button Next");
+		verifyElement(getBtn_previous(), "Button Previous");
+	}
+
+	public void verify_student_status() throws Exception {
+		getTab_active().click();
+		getLead_tab().click();
+		getFormer_tab().click();
+		getWaitlist_tab().click();
+
 	}
 }

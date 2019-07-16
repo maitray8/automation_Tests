@@ -1,5 +1,6 @@
 
 package com.mth.pages;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -42,6 +43,8 @@ public class SettingPage extends TemplatePage implements settingPageLocators {
 	@FindBy(how = How.XPATH, using = SUCCESS_MESSAGE_CLASS)
 	private WebElement sucess_message;
 
+	
+
 	public SettingPage() {
 		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
@@ -75,6 +78,7 @@ public class SettingPage extends TemplatePage implements settingPageLocators {
 	public WebElement getBtn_txt_add_rate() {
 		return btn_txt_add_rate;
 	}
+
 
 	public WebElement getDrp_period() {
 		return drp_period;
@@ -135,5 +139,6 @@ public class SettingPage extends TemplatePage implements settingPageLocators {
 		waitForElementToAppear(getSucess_message());
 		verifyElement(getSucess_message(), "Sucess Message");
 	}
+	
 
 }

@@ -6,6 +6,13 @@ public interface Locators {
 		String PROFILE_ICON_XPATH = ".//div[@id='welcome']//div[@class='menu-profile']";
 		String SETTING_MENU_XPATH = "//a[@class='menu-web-settings']";
 		String DIV_TOP_XPATH = "//div[@id='top']";
+		String HELP_ICON = "//div[@class='menu-support-icon']";
+		String TOGGLE_HELP_BOX_XPATH = "//a[@id='help-show']";
+		String STUDENT_HELP_XPATH = "//div[@id='hlpstudents-list-main']";
+		String MENU_DASHBOARD = "//ul[@id='left-nav']//a[contains(@href,'teacher/index')]//span[text()='Dashboard']";
+		String TEACHER_HELP_XPATH = "//div[@id='hlphome-intro']";
+
+
 	}
 
 	public interface LoginPageLocators {
@@ -58,6 +65,15 @@ public interface Locators {
 		String TXT_LASTNAME_XPATH = "//input[@name='Student[0][Last]']";
 		String BTN_CREATE_XPATH = "//input[@id='AddStudent']";
 		String BTN_ADD_DETAIL_XPATH = "//input[@id='addDetails']";
-		String BTN_CANCEL_XPATH="//a[text()='Cancel']";
+		String BTN_CANCEL_XPATH = "//a[text()='Cancel']";
+		String ALL_TAB_XPATH = "//button[@data-id='all']";
+		String ACTIVE_TAB_XPATH = "//button[@data-id='active']";
+		String FORMER_TAB_XPATH = "//button[@data-id='former']";
+		String LEAD_TAB_XPATH = "//button[@data-id='lead']";
+		String WAITLIST_TAB_XPATH = "//button[@data-id='waitlist']";
+		String BTN_FIRST_XPATH = "//a[text()='First']";
+		String BTN_PREVIOUS_XPATH = "//a[text()='Previous']";
+		String BTN_NEXT_XPATH = "//a[text()='Next']";
+		String BTN_LAST_XPATH = "//a[text()='Last']";
 	}
 }

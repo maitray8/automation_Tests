@@ -66,6 +66,15 @@ public class MTHTest {
 				configFileReader.getCustomProperty("LastName"));
 
 	}
+	
+	@Test(groups = { "regression", "smoke" }, priority = 5, description = "suit is to verify student list with different status")
+	public void Verify_Student_With_Different_Status() throws Exception {
+		StudentPage studentPage = new StudentPage();
+		studentPage.naviagteToStudentListingPage();
+		studentPage.verify_tab();
+		studentPage.verify_student_status();
+		studentPage.verify_help_functionality();
+	}
 
 	@AfterSuite
 	public void closeBrowser() {
