@@ -185,12 +185,14 @@ public class StudentPage extends TemplatePage implements studentPageLocators {
 
 	}
 
+	//Method to verify Create Student functionality 
 	public void createStudent(String name, String lastname) {
 		getTxt_first_name().sendKeys(name);
 		getTxt_last_name().sendKeys(lastname);
 		getBtn_create().click();
 	}
 
+	//Method to verify student tab functionality
 	public void verify_tab() throws Exception {
 		verifyElement(getTab_all_student(), "All Student tab");
 		verifyElement(getTab_active(), "Active tab");
@@ -202,7 +204,8 @@ public class StudentPage extends TemplatePage implements studentPageLocators {
 		verifyElement(getBtn_next(), "Button Next");
 		verifyElement(getBtn_previous(), "Button Previous");
 	}
-
+	
+	//Method to verify student with different status
 	public void verify_student_status() throws Exception {
 		getTab_active().click();
 		getLead_tab().click();

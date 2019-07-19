@@ -1,16 +1,18 @@
 package com.mth.pages;
 
 import java.io.IOException;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
 import com.mth.configuration.*;
 import com.mth.Locators.Locators.LoginPageLocators;
 
+/**
+ * @author Maitray Bhatt & Nidhi Gohil
+ *
+ */
 public class LoginPage extends TemplatePage implements LoginPageLocators {
 
 	@FindBy(how = How.ID, using = USERNAME_TEXTBOX_ID)

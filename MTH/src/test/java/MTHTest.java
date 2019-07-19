@@ -45,6 +45,12 @@ public class MTHTest {
 		DashboardPage dashboardPage = new DashboardPage();
 		dashboardPage.verify_LandingPage();
 	}
+	
+	@Test(groups = { "regression", "smoke" }, priority = 4, description = "suit is to verify Navigation menu")
+	public void verify_navigation_menu() throws Exception {
+		DashboardPage dashboardPage = new DashboardPage();
+		dashboardPage.verify_nevigation_menu();
+	}
 
 	@Test(groups = { "regression", "smoke" }, priority = 5, description = "suit is to verify add rate functionality")
 	public void verify_add_rate_functionality() throws Exception {

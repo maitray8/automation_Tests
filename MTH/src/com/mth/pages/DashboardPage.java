@@ -8,7 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 import com.mth.Locators.Locators.DashboardLocators;
 import com.mth.configuration.BasePage;
 
-public class DashboardPage extends BasePage implements DashboardLocators {
+/**
+ * @author Maitray Bhatt & Nidhi Gohil
+ *
+ */
+public class DashboardPage extends TemplatePage implements DashboardLocators {
 
 	public DashboardPage() {
 		PageFactory.initElements(driver, this);
@@ -35,6 +39,8 @@ public class DashboardPage extends BasePage implements DashboardLocators {
 	@FindBy(how = How.XPATH, using = MONTHLY_EARNING_CHART)
 	private WebElement monthly_earning_chart;
 
+
+	
 	public WebElement getBirthday_tile() {
 		return birthday_tile;
 	}
@@ -62,7 +68,7 @@ public class DashboardPage extends BasePage implements DashboardLocators {
 	public WebElement getMonthly_earning_chart() {
 		return monthly_earning_chart;
 	}
-
+	//Method to verify lending page
 	public void verify_LandingPage() throws Exception {
 		verifyElement(getDashboardtitle(), "Dashboard Title");
 		verifyElement(getOverdue_lent_item(), "Over due lent item Tile");
