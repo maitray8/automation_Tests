@@ -11,26 +11,26 @@ public interface Locators {
 		String STUDENT_HELP_XPATH = "//div[@id='hlpstudents-list-main']";
 		String MENU_DASHBOARD = "//ul[@id='left-nav']//a[contains(@href,'teacher/index')]//span[text()='Dashboard']";
 		String TEACHER_HELP_XPATH = "//div[@id='hlphome-intro']";
-		String MENU_STUDENTS_XPATH="//ul[@id='left-nav']//Span[text()='Students']";
-		String MENU_STUDENT_LIST_XPATH="//ul[@id='left-nav']//Span[text()='Students List']";
-		String MENU_PRACTICE_LOG_XPATH="//ul[@id='left-nav']//Span[text()='Practice log']";
-		String MENU_LENDING_LIBRARY_XPATH="//ul[@id='left-nav']//Span[text()='Lending Library']";
-		String MENU_REPERATOIRE_XPATH="//ul[@id='left-nav']//Span[text()='Repertoire Tracker']";
-		String MENU_PUSH_ANNOUNCEMENT_XPATH="//ul[@id='left-nav']//Span[text()='Push Announcements']";
-		String MENU_CALENDAR_XPATH="//ul[@id='left-nav']//Span[text()='Calendar']";
-		String MENU_REPORTS_XPATH="//ul[@id='left-nav']//Span[text()='Reports']";
-		String MENU_WEBSITE_XPATH="//ul[@id='left-nav']//Span[text()='Website']";
-		String MENU_BIILING_XPATH="//ul[@id='left-nav']//Span[text()='Billing']";
-		String MENU_ALL_REPORTS_XPATH="//ul[@id='left-nav']//Span[text()='All Reports']";
-		String MENU_FINANCE_REPORTS_XPATH="//ul[@id='left-nav']//Span[text()='Financial Reports']";
-		String MENU_STUDENT_REPORTS_XPATH="//ul[@id='left-nav']//Span[text()='Student Reports']";
-		String MENU_CALENDAR_REPORTS_XPATH="//ul[@id='left-nav']//Span[text()='Calendar Reports']";
-		String MENU_PAGES_XPATH="//ul[@id='left-nav']//Span[text()='Pages']";
-		String MENU_THEME_XPATH="//ul[@id='left-nav']//Span[text()='Theme']";
-		String MENU_BLOG_XPATH="//ul[@id='left-nav']//Span[text()='Blog']";
-		String MENU_PHOTOS_XPATH="//ul[@id='left-nav']//Span[text()='Photos']";
-		String MENU_ANNOUNCEMENT_XPATH="//ul[@id='left-nav']//Span[text()='Announcements']";
-		String MENU_LINKS_XPATH="//ul[@id='left-nav']//Span[text()='Link']";
+		String MENU_STUDENTS_XPATH = "//ul[@id='left-nav']//Span[text()='Students']";
+		String MENU_STUDENT_LIST_XPATH = "//ul[@id='left-nav']//Span[text()='Students List']";
+		String MENU_PRACTICE_LOG_XPATH = "//ul[@id='left-nav']//Span[text()='Practice log']";
+		String MENU_LENDING_LIBRARY_XPATH = "//ul[@id='left-nav']//Span[text()='Lending Library']";
+		String MENU_REPERATOIRE_XPATH = "//ul[@id='left-nav']//Span[text()='Repertoire Tracker']";
+		String MENU_PUSH_ANNOUNCEMENT_XPATH = "//ul[@id='left-nav']//Span[text()='Push Announcements']";
+		String MENU_CALENDAR_XPATH = "//ul[@id='left-nav']//Span[text()='Calendar']";
+		String MENU_REPORTS_XPATH = "//ul[@id='left-nav']//Span[text()='Reports']";
+		String MENU_WEBSITE_XPATH = "//ul[@id='left-nav']//Span[text()='Website']";
+		String MENU_BIILING_XPATH = "//ul[@id='left-nav']//Span[text()='Billing']";
+		String MENU_ALL_REPORTS_XPATH = "//ul[@id='left-nav']//Span[text()='All Reports']";
+		String MENU_FINANCE_REPORTS_XPATH = "//ul[@id='left-nav']//Span[text()='Financial Reports']";
+		String MENU_STUDENT_REPORTS_XPATH = "//ul[@id='left-nav']//Span[text()='Student Reports']";
+		String MENU_CALENDAR_REPORTS_XPATH = "//ul[@id='left-nav']//Span[text()='Calendar Reports']";
+		String MENU_PAGES_XPATH = "//ul[@id='left-nav']//Span[text()='Pages']";
+		String MENU_THEME_XPATH = "//ul[@id='left-nav']//Span[text()='Theme']";
+		String MENU_BLOG_XPATH = "//ul[@id='left-nav']//Span[text()='Blog']";
+		String MENU_PHOTOS_XPATH = "//ul[@id='left-nav']//Span[text()='Photos']";
+		String MENU_ANNOUNCEMENT_XPATH = "//ul[@id='left-nav']//Span[text()='Announcements']";
+		String MENU_LINKS_XPATH = "//ul[@id='left-nav']//Span[text()='Link']";
 
 	}
 
@@ -94,5 +94,16 @@ public interface Locators {
 		String BTN_PREVIOUS_XPATH = "//a[text()='Previous']";
 		String BTN_NEXT_XPATH = "//a[text()='Next']";
 		String BTN_LAST_XPATH = "//a[text()='Last']";
+	}
+
+	public interface calendarPageLocatores {
+		String SEARCHBAR_XPATH = "//input[@id='searchWord']";
+		String TAB_MONTH_XPATH = "//button[text()='Month']";
+		String TAB_WEEK_XPATH = "//button[text()='Week']";
+		String TAB_DAY_XPATH = "//button[text()='Day']";
+		String TAB_LOCATION_XPATH = "//button[text()='Location']";
+		String TAB_AGENDA_XPATH = "//button[text()='Agency']";
+		String TAB_ATTENDANCE_XPATH = "//button[text()='Attendance']";
+
 	}
 }

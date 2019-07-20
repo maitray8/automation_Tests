@@ -15,7 +15,7 @@ import com.mth.Locators.Locators.studentPageLocators;
  * @author Maitray Bhatt & Nidhi Gohil
  *
  */
-public class StudentPage extends TemplatePage implements studentPageLocators {
+public class StudentPage extends LoginPage implements studentPageLocators {
 
 	public StudentPage() {
 		// TODO Auto-generated constructor stub

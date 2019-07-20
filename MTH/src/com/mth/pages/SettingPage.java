@@ -14,7 +14,7 @@ import com.mth.Locators.Locators.settingPageLocators;
  * @author Maitray Bhatt & Nidhi Gohil
  *
  */
-public class SettingPage extends DashboardPage implements settingPageLocators {
+public class SettingPage extends LoginPage implements settingPageLocators {
 
 	@FindBy(how = How.XPATH, using = RATE_TAB_XPATH)
 	private WebElement rate_tab;
